@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { TreeNode } from 'primeng/api';
-import { environment } from '../environments/environment';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -22,23 +22,30 @@ export class FileSystemService {
   }
   
   convertToPrimeNGStructure(node: any): TreeNode {
-    const primeNGNode: TreeNode = { label: node.name, children: [] };
-  
-    if (node.files) {
-      primeNGNode.children = node.files.map((file: any) => ({ label: file }));
-    }
+    const primeNGNode: TreeNode = { label: node.name, children: []};
   
     if (node.directories) {
       node.directories.forEach((subDirectories: Node[]) => {
         subDirectories.forEach((subNode: Node) => {
           const childNode = this.convertToPrimeNGStructure(subNode);
-          primeNGNode.children?.push(childNode);
+          if (!primeNGNode.children) {
+            primeNGNode.children = [];
+          }
+          primeNGNode.children.push(childNode);
         });
       });
     }
   
+    if (node.files) {
+      if (!primeNGNode.children) {
+        primeNGNode.children = [];
+      }
+      primeNGNode.children.push(...node.files.map((file: any) => ({ label: file })));
+    }
+  
     return primeNGNode;
   }
+  
   
   convertSearchToPrimeNGStructure(node: any): TreeNode {
     return node.map((item: string) => ({ label: item }));
