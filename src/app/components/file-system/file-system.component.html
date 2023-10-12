@@ -1,3 +1,5 @@
-<app-file-system-search (searchClicked)="updateFiles($event)"> </app-file-system-search>
-<p-tree [value]="files"  [filter]="true"> 
-</p-tree>
+<div class="row py-4 px-5">
+    <app-file-system-search (searchClicked)="updateFiles($event)" class="pl-3 pr-3"></app-file-system-search>
+    <p-tree [value]="files" class="pl-3 pr-3"></p-tree>
+  </div>
+  

@@ -19,18 +19,16 @@ export class FileSystemComponent implements OnInit{
   getFiles(): void{
     this.fileSystemService.getFileSystemData().subscribe(data => {
       if (data && data.length > 0) {
-      this.files = [this.fileSystemService.convertToPrimeNGStructure(data[0])];
-      debugger
+     this.files=data;
       }
     });
   }
   updateFiles(searchTerm: string): void {
-    debugger
     if(searchTerm!=""){
     this.files=[];
     this.fileSystemService.searchFileSystem(searchTerm).subscribe(data => {
       if (data && data.length > 0) {
-      this.files = this.fileSystemService.convertSearchToPrimeNGStructure(data);
+        this.files=data;
       }
     });
   }

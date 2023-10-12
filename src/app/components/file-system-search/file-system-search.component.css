@@ -2,4 +2,46 @@
     text-align: center;
     margin: 20px;
   }
-  
+  .p-inputtext {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .5em .75em;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    line-height: 1.5;
+    width: 100%;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.p-inputtext:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+.p-input-icon {
+  position: relative;
+}
+
+.p-input-icon i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  font-size: 16px;
+}
+.custom-input {
+  padding-top: 10px; 
+  padding-left: 10px; 
+}
+.custom-clear-button {
+  color: black; 
+  border: none; 
+  background: none; 
+  font-size: 1.25rem; 
+  cursor: pointer; 
+}
+
+.custom-clear-button:focus {
+  outline: none; 
+}
