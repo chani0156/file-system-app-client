@@ -2,13 +2,13 @@
 
 This project is an Angular application implementing a file system search interface. The application consists of a single-page user interface with a text input for searching and a Tree View component to display the file system structure.
 
-## Components Used
-
-- **Angular 16:** This project is developed using Angular 16, following industry best practices for structure and design.
-
 # FileSystemApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
+
+## Components Used
+
+- **Angular 16:** This project is developed using Angular 16, following industry best practices for structure and design.
 
 - **PrimeNG Tree Component:** The application utilizes the [PrimeNG Tree component](https://primefaces.org/primeng/showcase/#/tree) to efficiently display the hierarchical file system structure. This component provides an intuitive and user-friendly interface for navigating and interacting with the data.
 
