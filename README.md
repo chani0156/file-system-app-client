@@ -21,7 +21,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. Make sure you have Node.js and npm installed on your machine.
 
-2. Navigate to the `frontend` directory.
+2. Navigate to the `file-system-app-client` directory.
 
 3. Install project dependencies by running:
 
