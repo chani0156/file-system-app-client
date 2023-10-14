@@ -1,19 +1,16 @@
 <div class="row py-3">
-  <div class="col-6">
+    <div class="col-6">
       <div class="p-inputgroup">
         <input type="text" [(ngModel)]="searchTerm" placeholder="search by prefix" 
-        (input)="searchTerm$.next(searchTerm)" class="p-inputtext p-component custom-input">
-      <span class="p-inputgroup-addon">
-              <i class="pi pi-search"></i>
-          </span>
-          <button type="button" class="p-button p-button-rounded p-button-text custom-clear-button" 
+          (input)="searchTerm$.next(searchTerm)" class="p-inputtext p-component custom-input">
+        <span class="p-inputgroup-addon">
+          <i class="pi pi-search"></i>
+        </span>
+        <button type="button" class="p-button p-button-rounded p-button-text custom-clear-button" 
           (click)="clearSearch()">
           <i class="pi pi-times"></i>
         </button>
       </div>
+    </div>
   </div>
-</div>
-
-
-
   

@@ -11,7 +11,7 @@ export class FileSystemSearchComponent implements OnInit {
 
   searchTerm$ = new Subject<string>();
   searchSubscription!: Subscription;
-    searchTerm: string = '';
+  searchTerm: string = '';
   @Output() searchClicked = new EventEmitter<string>();
   ngOnInit() {
     this.searchSubscription = this.searchTerm$
@@ -24,14 +24,18 @@ export class FileSystemSearchComponent implements OnInit {
       });
   }
 
-
+  // Function to emit a search event to the parent component
   search(): void {
     this.searchClicked.emit(this.searchTerm);
   }
+  
+    // Function to clear the search term
   clearSearch() {
     this.searchTerm = ''; 
     this.searchTerm$.next(''); 
   }
+
+    // Called when the component is destroyed
   ngOnDestroy() {
     this.searchSubscription.unsubscribe();
   }
