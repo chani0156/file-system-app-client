@@ -45,9 +45,9 @@ The server-side of this application provides an API endpoint to retrieve file sy
 
 1. Ensure you have Visual Studio and .NET SDK installed on your machine.
 
-2. Open the solution file (`YourSolution.sln`) in Visual Studio.
+2. Open the solution file (`files.sln`) in Visual Studio.
 
-3. Set the startup project to the desired backend project (e.g., `FilesServer`).
+3. Set the startup project to the desired backend project (e.g., `files`).
 
 4. Press `Ctrl + F5` or click the "Start" button to run the backend.
 
